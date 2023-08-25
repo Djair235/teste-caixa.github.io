@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando eventos</title>
+    <style>
+        #div1 {
+            background-color: white;
+            border: 7px solid black;
+            height: 300px;
+            width: 300px;
+            margin-left: 580px;
+            margin-top: 100px;
+        }
+
+        #divpai_botao {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #botao {
+            height: 70px;
+            width: 230px;
+            font-size: 25px;
+            text-align: center;
+            margin-top: 100px;
+            margin-left: 620px;
+        }
+
+        #botao2 {
+            height: 70px;
+            width: 230px;
+            font-size: 25px;
+            margin-top: 20px;
+            margin-left: 620px;
+            visibility: hidden;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="div1">
+        
+    </div>
+
+    <div id="divpai_botao">
+        <button id="botao" onclick="clicar()">
+            Mudar Cor
+        </button>
+    
+        <button id="botao2" onclick="voltar_cor()">
+            Voltar a Cor Original
+        </button>
+    </div>
+
+
+    <script>
+        function clicar() {
+            var botao = document.getElementById("botao")
+            var div_exemp = document.getElementById("div1")
+            var botao_voltar = document.getElementById("botao2")
+            div_exemp.style.backgroundColor = 'red'
+            botao_voltar.style.visibility = "visible"
+            
+        }
+
+        function voltar_cor() {
+            var botao = document.getElementById("botao")
+            var div_exemp = document.getElementById("div1")
+            var botao_voltar = document.getElementById("botao2")
+            div_exemp.style.backgroundColor = "white"
+            botao_voltar.style.visibility = "hidden"
+
+        }
+    </script>
+</body>
+</html>
